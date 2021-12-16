@@ -1,0 +1,177 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE; IE=11; IE=9; IE=8; IE=7" />
+    <link rel="stylesheet" type="text/css" href="branding.css" />
+    <style type="text/css">.cl_CollapsibleArea_expanding {width: auto; height: auto; position: relative; left: 0px;}.cl_CollapsibleArea_collapsing {width: auto; height: auto; position: relative; left: -14px;}.OH_CodeSnippetContainerTabLeftActive, .OH_CodeSnippetContainerTabLeft,.OH_CodeSnippetContainerTabLeftDisabled {background-image: url('tabLeftBG.gif')}.OH_CodeSnippetContainerTabRightActive, .OH_CodeSnippetContainerTabRight,.OH_CodeSnippetContainerTabRightDisabled {background-image: url('tabRightBG.gif')}.OH_footer { background-image: url('footer_slice.gif'); background-position:top; background-repeat:repeat-x}</style>
+    <script src="branding.js" type="text/javascript"></script>
+    <meta name="Microsoft.Help.TopicVendor" content="Microsoft" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <meta name="X-UA-Compatible" content="IE=EDGE; IE=11; IE=9; IE=8; IE=7" />
+    <meta name="Microsoft.Help.Locale" content="en-us" />
+    <meta name="Microsoft.Help.TopicLocale" content="en-us" />
+    <meta name="Microsoft.Help.TopicVersion" content="0" />
+    <meta name="Microsoft.Help.Id" content="VS.core-docs/csharp/language-reference/keywords/async" />
+    <meta name="SelfBranded" content="false" />
+    <meta name="OnlineLinkBase" content="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/async" />
+    <meta name="BlockOnlineLink" content="true" />
+    <meta name="IsPrinterFriendly" content="true" />
+    <meta name="Title" content="async (C# Reference)" />
+    <Title>async (C# Reference)</Title>
+    <meta name="Microsoft.Help.Package" content="v2Visual C#_6D81C170_en-us__0" />
+    <meta name="Microsoft.Help.Book" content="Visual C#" />
+    <meta name="Microsoft.Help.Keywords" content="async keyword [C#]" />
+    <meta name="Microsoft.Help.Keywords" content="async method [C#]" />
+    <meta name="Microsoft.Help.Keywords" content="async [C#]" />
+    <meta name="Microsoft.Help.F1" content="async_CSharpKeyword" />
+    <meta name="Microsoft.Help.Category" content="DevLang:csharp" />
+    <meta name="Microsoft.Help.TocParent" content="VS.core-docs/$fake-Modifiers-f2f6518fea7c48a8a34b0e590763d201" />
+    <meta name="Microsoft.Help.TocParentTopicVersion" content="0" />
+    <meta name="Microsoft.Help.TocOrder" content="2" />
+  </head>
+  <body onload="onLoad()" class="primary-mtps-offline-document">
+    <span id="HCColorTest"></span>
+    <script>setUserPreferenceLang('2');
+function CA_Click2(id, ExpandName, CollapsName)
+{
+    var elem = document.getElementById(id);
+    var img = document.getElementById(id + '_img');
+    var content = document.getElementById(id + '_c');
+
+    if (!elem)
+        return;
+
+    if (!content)
+        return;
+
+    if (content.className == 'sectionblock')
+    {
+        img.className = 'cl_CollapsibleArea_collapsing';
+        elem.title = ExpandName;
+        content.className = 'sectionnone';
+        elem.setAttribute('aria-expanded', 'false');
+    }
+    else
+    {
+        img.className = 'cl_CollapsibleArea_expanding';
+        elem.title = CollapsName;
+        content.className = 'sectionblock';
+        elem.setAttribute('aria-expanded', 'true');
+    }
+}</script>
+    <div class="OH_outerDiv">
+      <div class="OH_outerContent">
+        <div class="OH_topic">
+          <div class="OH_title">
+            <table>
+              <tr>
+                <td class="OH_tdTitleColumn">async (C# Reference)</td>
+                <td class="OH_tdLogoColumn">
+                  <img id="VSLogo" src="vs_logo_bk.gif" alt="Visual" title="Visual" />
+                  <img id="VSLogoHC" style="display:none" src="vs_logo_wh.gif" alt="Visual" title="Visual" />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <table style="width:97%;">
+          <tr>
+            <td style="text-align:left;"></td>
+            <td style="text-align:right;">
+              <div class="OH_feedbacklink">
+                <img src="online_icon.gif" class="OH_offlineIcon" alt="Online" title="Online" />
+                <span>View this topic <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/async" target="_blank">online</a> in your default browser.</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+<div class="topic" xmlns="http://www.w3.org/1999/xhtml">
+<div id="mainSection">
+<div id="mainBody">05/22/2017<div><p>Use the <span class="input">async</span> modifier to specify that a method, <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2fprogramming-guide%2fstatements-expressions-operators%2flambda-expressions&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">lambda expression</a>, or <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2flanguage-reference%2foperators%2fdelegate-operator&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/delegate-operator&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">anonymous method</a> is asynchronous. If you use this modifier on a method or expression, it's referred to as an <span style="font-style:italic">async method</span>. The following example defines an async method named <span class="input">ExampleMethodAsync</span>:</p><div id="ID37" class="OH_CodeSnippetContainer"><div class="OH_CodeSnippetContainerTabs" id="ID37_tabs"><div class="OH_CodeSnippetContainerTabLeftActive" id="ID37_tabimgleft"></div><div id="ID37_tab1" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>JavaScript</a></div><div id="ID37_tab2" class="OH_CodeSnippetContainerTabActive" EnableCopyCode="true"><a class="languagecode" id="1" href="javascript:ChangeTab('ID37','C#','2','6')">C#</a></div><div id="ID37_tab3" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>C++</a></div><div id="ID37_tab4" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>F#</a></div><div id="ID37_tab5" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>JScript</a></div><div id="ID37_tab6" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>VB</a></div><div class="OH_CodeSnippetContainerTabRight" id="ID37_tabimgright"></div></div><div id="ID37_codecollection" class="OH_CodeSnippetContainerCodeCollection"><div class="OH_CodeSnippetToolBar"><div class="OH_CodeSnippetToolBarText"><a id="ID37_ViewColorized" href="javascript:ExchangeTitleContent('ID37','6')" title="View Colorized" style="display: none">View Colorized</a><a id="ID37_copycode" href="javascript:CopyToClipboard('ID37','6')" title="Copy to Clipboard" style="display: none">Copy to Clipboard</a></div></div><div id="ID37_code_Div1" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID37_code_Plain_Div1" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div><div id="ID37_code_Div2" class="OH_CodeSnippetContainerCode" style="display: block"><pre><span style="color:blue">public</span> async Task&lt;<span style="color:blue">int</span>&gt; ExampleMethodAsync()  
+{  
+    <span style="color:green">// . . . .  </span>
+}
+</pre></div><div id="ID37_code_Plain_Div2" class="OH_CodeSnippetContainerCode" style="display: none"><pre>public async Task&lt;int&gt; ExampleMethodAsync()  
+{  
+    // . . . .  
+}</pre></div><div id="ID37_code_Div3" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID37_code_Plain_Div3" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div><div id="ID37_code_Div4" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID37_code_Plain_Div4" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div><div id="ID37_code_Div5" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID37_code_Plain_Div5" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div><div id="ID37_code_Div6" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID37_code_Plain_Div6" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div></div></div><script>addSpecificTextLanguageTagSet('ID37');</script><p>If you're new to asynchronous programming or do not understand how an async method uses the <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2flanguage-reference%2foperators%2fawait&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/await&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US"><span class="input">await</span> operator</a> to do potentially long-running work without blocking the caller’s thread, read the introduction in <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2fprogramming-guide%2fconcepts%2fasync%2findex&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/index&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">Asynchronous Programming with async and await</a>. The following code is found inside an async method and calls the <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.dotnet-api-docs%2fapi%2fsystem.net.http.httpclient.getstringasync%3fview%3dnetframework-4.8&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient.getstringasync?view=netframework-4.8&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">HttpClient.GetStringAsync</a> method:</p><div id="ID43" class="OH_CodeSnippetContainer"><div class="OH_CodeSnippetContainerTabs" id="ID43_tabs"><div class="OH_CodeSnippetContainerTabLeftActive" id="ID43_tabimgleft"></div><div id="ID43_tab1" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>JavaScript</a></div><div id="ID43_tab2" class="OH_CodeSnippetContainerTabActive" EnableCopyCode="true"><a class="languagecode" id="1" href="javascript:ChangeTab('ID43','C#','2','6')">C#</a></div><div id="ID43_tab3" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>C++</a></div><div id="ID43_tab4" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>F#</a></div><div id="ID43_tab5" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>JScript</a></div><div id="ID43_tab6" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>VB</a></div><div class="OH_CodeSnippetContainerTabRight" id="ID43_tabimgright"></div></div><div id="ID43_codecollection" class="OH_CodeSnippetContainerCodeCollection"><div class="OH_CodeSnippetToolBar"><div class="OH_CodeSnippetToolBarText"><a id="ID43_ViewColorized" href="javascript:ExchangeTitleContent('ID43','6')" title="View Colorized" style="display: none">View Colorized</a><a id="ID43_copycode" href="javascript:CopyToClipboard('ID43','6')" title="Copy to Clipboard" style="display: none">Copy to Clipboard</a></div></div><div id="ID43_code_Div1" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID43_code_Plain_Div1" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div><div id="ID43_code_Div2" class="OH_CodeSnippetContainerCode" style="display: block"><pre><span style="color:blue">string</span> contents = await httpClient.GetStringAsync(requestUrl);
+</pre></div><div id="ID43_code_Plain_Div2" class="OH_CodeSnippetContainerCode" style="display: none"><pre>string contents = await httpClient.GetStringAsync(requestUrl);</pre></div><div id="ID43_code_Div3" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID43_code_Plain_Div3" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div><div id="ID43_code_Div4" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID43_code_Plain_Div4" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div><div id="ID43_code_Div5" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID43_code_Plain_Div5" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div><div id="ID43_code_Div6" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID43_code_Plain_Div6" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div></div></div><script>addSpecificTextLanguageTagSet('ID43');</script><p>An async method runs synchronously until it reaches its first <span class="input">await</span> expression, at which point the method is suspended until the awaited task is complete. In the meantime, control returns to the caller of the method, as the example in the next section shows.</p><p>If the method that the <span class="input">async</span> keyword modifies doesn't contain an <span class="input">await</span> expression or statement, the method executes synchronously. A compiler warning alerts you to any async methods that don't contain <span class="input">await</span> statements, because that situation might indicate an error. See <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2flanguage-reference%2fcompiler-messages%2fcs4014&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs4014&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">Compiler Warning (level 1) CS4014</a>.</p><p>The <span class="input">async</span> keyword is contextual in that it's a keyword only when it modifies a method, a lambda expression, or an anonymous method. In all other contexts, it's interpreted as an identifier.</p><h2 id="example">Example</h2><p>The following example shows the structure and flow of control between an async event handler, <span class="input">StartButton_Click</span>, and an async method, <span class="input">ExampleMethodAsync</span>. The result from the async method is the number of characters of a web page. The code is suitable for a Windows Presentation Foundation (WPF) app or Windows Store app that you create in Visual Studio; see the code comments for setting up the app.</p><p>You can run this code in Visual Studio as a Windows Presentation Foundation (WPF) app or a Windows Store app. You need a Button control named <span class="input">StartButton</span> and a Textbox control named <span class="input">ResultsTextBox</span>. Remember to set the names and handler so that you have something like this:</p><div id="ID61" class="OH_CodeSnippetContainer"><div class="OH_CodeSnippetContainerTabs" id="ID61_tabs"><div class="OH_CodeSnippetContainerTabLeft" id="ID61_tabimgleft"></div><div id="ID61_tab1" class="OH_CodeSnippetContainerTabSolo" EnableCopyCode="true"><a>XAML</a></div><div class="OH_CodeSnippetContainerTabRight" id="ID61_tabimgright"></div></div><div id="ID61_codecollection" class="OH_CodeSnippetContainerCodeCollection"><div class="OH_CodeSnippetToolBar"><div class="OH_CodeSnippetToolBarText"><a id="ID61_ViewColorized" href="javascript:ExchangeTitleContent('ID61','6')" title="View Colorized" style="display: none">View Colorized</a><a id="ID61_copycode" href="javascript:CopyToClipboard('ID61','6')" title="Copy to Clipboard">Copy to Clipboard</a></div></div><div id="ID61_code_Div1" class="OH_CodeSnippetContainerCode" style="display:block"><pre><span style="color:blue">&lt;</span><span style="color:maroon">Button</span> <span style="color:red">Content</span><span style="color:blue">="Button"</span> <span style="color:red">HorizontalAlignment</span><span style="color:blue">="Left"</span> <span style="color:red">Margin</span><span style="color:blue">="88,77,0,0"</span> <span style="color:red">VerticalAlignment</span><span style="color:blue">="Top"</span> <span style="color:red">Width</span><span style="color:blue">="75"</span> <span style="color:red"> 
+        Click</span><span style="color:blue">="StartButton_Click"</span> <span style="color:red">Name</span><span style="color:blue">="StartButton"</span><span style="color:blue">/</span><span style="color:blue">&gt;</span>  
+<span style="color:blue">&lt;</span><span style="color:maroon">TextBox</span> <span style="color:red">HorizontalAlignment</span><span style="color:blue">="Left"</span> <span style="color:red">Height</span><span style="color:blue">="137"</span> <span style="color:red">Margin</span><span style="color:blue">="88,140,0,0"</span> <span style="color:red">TextWrapping</span><span style="color:blue">="Wrap"</span> <span style="color:red">  
+         Text</span><span style="color:blue">="&amp;lt;Enter a URL&amp;gt;"</span> <span style="color:red">VerticalAlignment</span><span style="color:blue">="Top"</span> <span style="color:red">Width</span><span style="color:blue">="310"</span> <span style="color:red">Name</span><span style="color:blue">="ResultsTextBox"</span><span style="color:blue">/</span><span style="color:blue">&gt;</span></pre></div><div id="ID61_code_Plain_Div1" class="OH_CodeSnippetContainerCode" style="display:none"><pre>&lt;Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  
+        Click="StartButton_Click" Name="StartButton"/&gt;  
+&lt;TextBox HorizontalAlignment="Left" Height="137" Margin="88,140,0,0" TextWrapping="Wrap"   
+         Text="&amp;lt;Enter a URL&amp;gt;" VerticalAlignment="Top" Width="310" Name="ResultsTextBox"/&gt;</pre></div></div></div><script>addSpecificTextLanguageTagSet('ID61');</script><p>To run the code as a WPF app:</p><ul><li>Paste this code into the <span class="input">MainWindow</span> class in MainWindow.xaml.cs.</li><li>Add a reference to System.Net.Http.</li><li>Add a <span class="input">using</span> directive for System.Net.Http.</li></ul><p>To run the code as a Windows Store app:</p><ul><li>Paste this code into the <span class="input">MainPage</span> class in MainPage.xaml.cs.</li><li>Add using directives for System.Net.Http and System.Threading.Tasks.</li></ul><div id="ID74" class="OH_CodeSnippetContainer"><div class="OH_CodeSnippetContainerTabs" id="ID74_tabs"><div class="OH_CodeSnippetContainerTabLeftActive" id="ID74_tabimgleft"></div><div id="ID74_tab1" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>JavaScript</a></div><div id="ID74_tab2" class="OH_CodeSnippetContainerTabActive" EnableCopyCode="true"><a class="languagecode" id="1" href="javascript:ChangeTab('ID74','C#','2','6')">C#</a></div><div id="ID74_tab3" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>C++</a></div><div id="ID74_tab4" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>F#</a></div><div id="ID74_tab5" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>JScript</a></div><div id="ID74_tab6" class="OH_CodeSnippetContainerTabDisabledNotFirst" EnableCopyCode="false" disabled="true"><a>VB</a></div><div class="OH_CodeSnippetContainerTabRight" id="ID74_tabimgright"></div></div><div id="ID74_codecollection" class="OH_CodeSnippetContainerCodeCollection"><div class="OH_CodeSnippetToolBar"><div class="OH_CodeSnippetToolBarText"><a id="ID74_ViewColorized" href="javascript:ExchangeTitleContent('ID74','6')" title="View Colorized" style="display: none">View Colorized</a><a id="ID74_copycode" href="javascript:CopyToClipboard('ID74','6')" title="Copy to Clipboard" style="display: none">Copy to Clipboard</a></div></div><div id="ID74_code_Div1" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID74_code_Plain_Div1" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div><div id="ID74_code_Div2" class="OH_CodeSnippetContainerCode" style="display: block"><pre><span style="color:blue">private</span> async <span style="color:blue">void</span> StartButton_Click(<span style="color:blue">object</span> sender, RoutedEventArgs e)
+{
+    <span style="color:green">// ExampleMethodAsync returns a Task&lt;int&gt;, which means that the method  </span>
+    <span style="color:green">// eventually produces an int result. However, ExampleMethodAsync returns  </span>
+    <span style="color:green">// the Task&lt;int&gt; value as soon as it reaches an await.  </span>
+    ResultsTextBox.Text += <span style="color:maroon">"\n"</span>;
+
+    <span style="color:blue">try</span>
+    {
+        <span style="color:blue">int</span> length = await ExampleMethodAsync();
+        <span style="color:green">// Note that you could put "await ExampleMethodAsync()" in the next line where  </span>
+        <span style="color:green">// "length" is, but due to when '+=' fetches the value of ResultsTextBox, you  </span>
+        <span style="color:green">// would not see the global side effect of ExampleMethodAsync setting the text.  </span>
+        ResultsTextBox.Text += String.Format(<span style="color:maroon">"Length: {0:N0}\n"</span>, length);
+    }
+    <span style="color:blue">catch</span> (Exception)
+    {
+        <span style="color:green">// Process the exception if one occurs.  </span>
+    }
+}
+
+<span style="color:blue">public</span> async Task&lt;<span style="color:blue">int</span>&gt; ExampleMethodAsync()
+{
+    <span style="color:blue">var</span> httpClient = <span style="color:blue">new</span> HttpClient();
+    <span style="color:blue">int</span> exampleInt = (await httpClient.GetStringAsync(<span style="color:maroon">"http://msdn.microsoft.com"</span>)).Length;
+    ResultsTextBox.Text += <span style="color:maroon">"Preparing to finish ExampleMethodAsync.\n"</span>;
+    <span style="color:green">// After the following return statement, any method that's awaiting  </span>
+    <span style="color:green">// ExampleMethodAsync (in this case, StartButton_Click) can get the   </span>
+    <span style="color:green">// integer result.  </span>
+    <span style="color:blue">return</span> exampleInt;
+}
+<span style="color:green">// The example displays the following output:  </span>
+<span style="color:green">// Preparing to finish ExampleMethodAsync.  </span>
+<span style="color:green">// Length: 53292</span>
+</pre></div><div id="ID74_code_Plain_Div2" class="OH_CodeSnippetContainerCode" style="display: none"><pre>private async void StartButton_Click(object sender, RoutedEventArgs e)
+{
+    // ExampleMethodAsync returns a Task&lt;int&gt;, which means that the method  
+    // eventually produces an int result. However, ExampleMethodAsync returns  
+    // the Task&lt;int&gt; value as soon as it reaches an await.  
+    ResultsTextBox.Text += "\n";
+
+    try
+    {
+        int length = await ExampleMethodAsync();
+        // Note that you could put "await ExampleMethodAsync()" in the next line where  
+        // "length" is, but due to when '+=' fetches the value of ResultsTextBox, you  
+        // would not see the global side effect of ExampleMethodAsync setting the text.  
+        ResultsTextBox.Text += String.Format("Length: {0:N0}\n", length);
+    }
+    catch (Exception)
+    {
+        // Process the exception if one occurs.  
+    }
+}
+
+public async Task&lt;int&gt; ExampleMethodAsync()
+{
+    var httpClient = new HttpClient();
+    int exampleInt = (await httpClient.GetStringAsync("http://msdn.microsoft.com")).Length;
+    ResultsTextBox.Text += "Preparing to finish ExampleMethodAsync.\n";
+    // After the following return statement, any method that's awaiting  
+    // ExampleMethodAsync (in this case, StartButton_Click) can get the   
+    // integer result.  
+    return exampleInt;
+}
+// The example displays the following output:  
+// Preparing to finish ExampleMethodAsync.  
+// Length: 53292</pre></div><div id="ID74_code_Div3" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID74_code_Plain_Div3" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div><div id="ID74_code_Div4" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID74_code_Plain_Div4" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div><div id="ID74_code_Div5" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID74_code_Plain_Div5" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div><div id="ID74_code_Div6" class="OH_CodeSnippetContainerCode" style=""><pre /></div><div id="ID74_code_Plain_Div6" class="OH_CodeSnippetContainerCode" style="display: none"><pre /></div></div></div><script>addSpecificTextLanguageTagSet('ID74');</script><div class="IMPORTANT"><p>Important</p><p>For more information about tasks and the code that executes while waiting for a task, see <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2fprogramming-guide%2fconcepts%2fasync%2findex&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/index&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">Asynchronous Programming with async and await</a>. For a full WPF example that uses similar elements, see <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2fprogramming-guide%2fconcepts%2fasync%2fwalkthrough-accessing-the-web-by-using-async-and-await&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">Walkthrough: Accessing the Web by Using Async and Await</a>.</p></div><h2 id="return-types">Return Types</h2><p>An async method can have the following return types:</p><ul><li><a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.dotnet-api-docs%2fapi%2fsystem.threading.tasks.task%3fview%3dnetframework-4.8&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=netframework-4.8&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">Task</a></li><li><a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.dotnet-api-docs%2fapi%2fsystem.threading.tasks.task-1%3fview%3dnetframework-4.8&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1?view=netframework-4.8&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">Task&lt;TResult&gt;</a></li><li><a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2flanguage-reference%2fkeywords%2fvoid&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/void&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">void</a>. <span class="input">async void</span> methods are generally discouraged for code other than event handlers because callers cannot <span class="input">await</span> those methods and must implement a different mechanism to report successful completion or error conditions.</li><li>Starting with C# 7.0, any type that has an accessible <span class="input">GetAwaiter</span> method. The <span class="input">System.Threading.Tasks.ValueTask&lt;TResult&gt;</span> type is one such implementation. It is available by adding the NuGet package <span class="input">System.Threading.Tasks.Extensions</span>.</li></ul><p>The async method can't declare any <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2flanguage-reference%2fkeywords%2fin-parameter-modifier&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/in-parameter-modifier&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">in</a>, <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2flanguage-reference%2fkeywords%2fref&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">ref</a> or <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2flanguage-reference%2fkeywords%2fout-parameter-modifier&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">out</a> parameters, nor can it have a <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2fprogramming-guide%2fclasses-and-structs%2fref-returns&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/ref-returns&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">reference return value</a>, but it can call methods that have such parameters.</p><p>You specify <span class="input">Task&lt;TResult&gt;</span> as the return type of an async method if the <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2flanguage-reference%2fkeywords%2freturn&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/return&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">return</a> statement of the method specifies an operand of type <span class="input">TResult</span>. You use <span class="input">Task</span> if no meaningful value is returned when the method is completed. That is, a call to the method returns a <span class="input">Task</span>, but when the <span class="input">Task</span> is completed, any <span class="input">await</span> expression that's awaiting the <span class="input">Task</span> evaluates to <span class="input">void</span>.</p><p>You use the <span class="input">void</span> return type primarily to define event handlers, which require that return type. The caller of a <span class="input">void</span>-returning async method can't await it and can't catch exceptions that the method throws.</p><p>Starting with C# 7.0, you return another type, typically a value type, that has a <span class="input">GetAwaiter</span> method to minimize memory allocations in performance-critical sections of code.</p><p>For more information and examples, see <a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2fprogramming-guide%2fconcepts%2fasync%2fasync-return-types&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/async-return-types&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">Async Return Types</a>.</p><h2 id="see-also">See also</h2><ul><li><a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.dotnet-api-docs%2fapi%2fsystem.runtime.compilerservices.asyncstatemachineattribute%3fview%3dnetframework-4.8&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/api/system.runtime.compilerservices.asyncstatemachineattribute?view=netframework-4.8&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">AsyncStateMachineAttribute</a></li><li><a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2flanguage-reference%2foperators%2fawait&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/await&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">await</a></li><li><a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2fprogramming-guide%2fconcepts%2fasync%2fwalkthrough-accessing-the-web-by-using-async-and-await&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">Walkthrough: Accessing the Web by Using Async and Await</a></li><li><a class="ops-internal-link" href="ms-xhelp:///?method=page&amp;id=vs.core-docs%2fcsharp%2fprogramming-guide%2fconcepts%2fasync%2findex&amp;onlinefallbackbase=https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/index&amp;vendor=Microsoft&amp;topicVersion=0&amp;topicLocale=EN-US">Asynchronous Programming with async and await</a></li></ul></div></div></div></div></div>
+    </div>
+    <div class="OH_footer">
+      <p>Copyright © Microsoft Corporation. All rights reserved.</p>
+    </div>
+  </body>
+</html>

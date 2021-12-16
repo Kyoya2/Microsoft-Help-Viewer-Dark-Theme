@@ -2,39 +2,50 @@ body.OH_VSIP_body
 {
 	font-family:Segoe UI, Verdana, Arial;
 	font-size:0.85em; /*10pt*/
-	color:#000;
+	color:#e6e6e6;
 	margin:0px;
 	padding:0px;
 	min-width:600px;
-	background-color:#fff;
+	background-color:#171717;
 }
 body
 {
 	font-family:Segoe UI, Verdana, Arial;
 	font-size:0.85em; /*10pt*/
-	color:#000;
-	margin:0px;
+	color:#e6e6e6;
+	margin-left:7%;
+	margin-right:7%;
 	padding:0px;
 	min-width:600px;
-	background-color:#fff;
+	background-color:#171717;
+	vertical-align: middle;
+}
+blockquote
+{
+	display: block;
+	margin: 1.2em 0 2em;
+	padding: 0 .8em;
+	border-width: 0 0 0 3px;
+	border-style: solid;
+	border-color: #404040;
 }
 a
 {
-	color: #1364c4;
+	color: #75B6E7;
 	text-decoration: none;
 }
 a:link
 {
-	color: #1364c4;
+	color: #75B6E7;
 }
 a:visited
 {
-	color: #960bb4;
+	color: #be5ed1;
 }
 a:hover,
 a:active
 {
-	color: #960bb4;
+	color: #be5ed1;
     text-decoration: underline;
 }
 a img
@@ -43,10 +54,16 @@ a img
 }
 pre
 {
-    font-family:Courier, "Courier New", Consolas, Monospace;
+    font-family:Consolas;
     overflow: hidden;
     white-space:pre-wrap;
     word-wrap:break-word;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	-moz-tab-size: 4;
+	hyphens: none;
 }
 .OH_topic
 {
@@ -62,7 +79,7 @@ DIV.OH_title
 DIV.OH_title table
 {
     border: 0;
-	border-color: #ffffff;
+	border-color: #171717;
 	width: 100%;
     margin: 0px;
 	padding: 0px;
@@ -80,7 +97,7 @@ DIV.OH_title table tr td
 	font-family:Segoe UI, Verdana, Arial;
 	font-size: 1.45em;  /*17pt*/
 	font-weight: bold;
-	color:#250c58;
+	color:#e6e6e6;
 	padding:0px;
 	padding-left:10px;
 	text-align: left;
@@ -111,7 +128,7 @@ a.other-version
 	font-size:1em; /*12pt*/
 	line-height:300%;
 	vertical-align:middle;
-	background-color:#E6E6E6;
+	background-color:#171717;
 	width:100%;
 }
 .target
@@ -152,8 +169,9 @@ H1.heading
 }
 H2
 { 
-	font-size:1.15em; /*13.5pt*/
+	font-size:2.15em; /*13.5pt*/
 	font-weight:bold;
+	font-weight: 600;
 }
 H2.subtitle
 {
@@ -294,7 +312,7 @@ div#header table tr#headerTableRow3 td
 }
 div#header table#bottomTable
 {
-	border-top-color:#fff;
+	border-top-color:#171717;
 	border-top-style:solid;
 	border-top-width:1px;
 	text-align:left;
@@ -321,19 +339,19 @@ DIV.OH_outerContent div#mainSection table th
 	font-family:Segoe UI, Verdana, Arial;
     font-size:0.85em; /*10pt*/
     border:1px solid #bbbbbb;
-    color:#000000;
-    background-color:#e5e5e5;
-    padding-left:13px;
-    padding-right:13px;
+    color:#e6e6e6;
+    background-color:#303030;
     vertical-align:middle;
-    text-align:left;
+	padding-left: 13px;
+	padding-right: 13px;
+    text-align:center;
 }
 DIV.OH_outerContent div#mainSection table td
 {
 	font-family:Segoe UI, Verdana, Arial;
     font-size:0.85em; /*10pt*/
     border:1px solid #bbbbbb;
-    color:#000000;
+    color:#e6e6e6;
     padding:5px;
     overflow:visible;
     vertical-align:top;
@@ -387,7 +405,7 @@ DIV.OH_outerContent div#mainSection table table td
 }
 .HeaderCaptionText, .title
 {
-    color:#000000;
+    color:#e6e6e6;
 	font-family:Segoe UI, Verdana, Arial;
     font-size:1.9em; /*24pt*/
     font-style:normal;
@@ -441,7 +459,7 @@ div.clsNote
 	font-weight:bold;
 	color:#6a6a6a;
 	float: left;
-	background-color: #FFFFFF;
+	background-color: #171717;
 	margin-top:13px;
 	margin-bottom:5px;
 	padding-right:7px;
@@ -458,7 +476,7 @@ div.clsNote
 .OH_CollapsibleArea_TitleDiv a:hover,
 .OH_CollapsibleArea_TitleDiv a:active
 {
-    color: #1364c4;
+    color: #75B6E7;
     text-decoration:none; 
 }
 .OH_CollapsibleArea_Title
@@ -480,7 +498,7 @@ div.clsNote
     border-bottom: #e5e5e5 1px solid;
     border-top: none;
     border-right: none;
-    color: #e5e5e5;
+    color: #404040;
     margin-left: 4px;
 }
 .sectionblock
@@ -616,7 +634,7 @@ div.libCScode pre
 pre.ideCScode
 {
 	background:	#F7F7FF;
-	border-top-color: #FFFFFF;
+	border-top-color: #171717;
 	border-top-style: solid;
 	border-top-width: 1px;
 	padding-left: 5px;
@@ -643,7 +661,7 @@ pre.ideCScode
     top:5px;
     _top:3px;
     float:left;
-    background-color:Transparent;
+	background-color: #2f2f2f;
 	vertical-align: middle;
 	cursor:default;
 	margin:0px;
@@ -669,7 +687,6 @@ pre.ideCScode
     margin:0px;
     padding:0px;
     _padding-top:2px;
-    height:20px;
 }
 .OH_CodeSnippetContainerTab,
 .OH_CodeSnippetContainerTabFirst,
@@ -679,8 +696,9 @@ pre.ideCScode
 .OH_CodeSnippetContainerTabDisabledNotFirst,
 .OH_CodeSnippetContainerTabSolo
 {
-	border-top:solid 1px #bbbbbb;
-	border-bottom : solid 3px #FFFFFF;
+	border-top:solid 1px #404040;
+	border-bottom : solid 2px white;
+	background-color: #2f2f2f;
 }
 .OH_CodeSnippetContainerTab,
 .OH_CodeSnippetContainerTabLeft,
@@ -691,27 +709,27 @@ pre.ideCScode
 .OH_CodeSnippetContainerTabRightDisabled,
 .OH_CodeSnippetContainerTabDisabledNotFirst
 {
-	border-bottom:solid 2px #d0d2d2;
+	border-bottom:solid 2px #404040;
 }
 .OH_CodeSnippetContainerTab,
 .OH_CodeSnippetContainerTabActiveNotFirst,
 .OH_CodeSnippetContainerTabDisabledNotFirst
 {
-    border-left:solid 1px #bbbbbb;	
+    border-left:solid 1px #404040;	
 }
 .OH_CodeSnippetContainerTab,
 .OH_CodeSnippetContainerTabLeft,
 .OH_CodeSnippetContainerTabRight,
 .OH_CodeSnippetContainerTabFirst
 {
-	background-color:#eff5ff;
+
 }
 .OH_CodeSnippetContainerTabDisabled,
 .OH_CodeSnippetContainerTabLeftDisabled,
 .OH_CodeSnippetContainerTabRightDisabled,
 .OH_CodeSnippetContainerTabDisabledNotFirst
 {
-    background-color:#f5f5f5;
+    color: #a8a8a8;
 }
 .OH_CodeSnippetContainerTabActive,
 .OH_CodeSnippetContainerTabLeftActive,
@@ -719,7 +737,7 @@ pre.ideCScode
 .OH_CodeSnippetContainerTabActiveNotFirst,
 .OH_CodeSnippetContainerTabSolo
 {
-	background-color:white;
+	background-color:404040;
     font-weight:bold;
 }
 .OH_CodeSnippetContainerTab a,
@@ -734,7 +752,7 @@ pre.ideCScode
 .OH_CodeSnippetContainerTabFirst a:hover
 {
 	padding:0px 5px 0px 5px;
-	color:#1364c4;
+	color:white;
 	text-decoration:none;
 	cursor: pointer;
 }
@@ -745,7 +763,7 @@ pre.ideCScode
 .OH_CodeSnippetContainerTabSolo a:hover
 {
 	padding:0px 5px 0px 5px;
-	color:#1364c4;
+	color:white;
 	text-decoration:none;
 }
 .OH_CodeSnippetContainerTab a:link,
@@ -755,14 +773,14 @@ pre.ideCScode
 .OH_CodeSnippetContainerTabSolo a:link,
 .OH_CodeSnippetContainerTabSolo a:visited
 {
-	color:#1364c4;
+	color:white;
 }
 .OH_CodeSnippetContainerTab a:active,
 .OH_CodeSnippetContainerTab a:hover,
 .OH_CodeSnippetContainerTabFirst a:active,
 .OH_CodeSnippetContainerTabFirst a:hover
 {
-	color:#250c58;
+	color:white;
 }
 .OH_CodeSnippetContainerTabActive a,
 .OH_CodeSnippetContainerTabActive a:link,
@@ -776,8 +794,8 @@ pre.ideCScode
 .OH_CodeSnippetContainerTabActiveNotFirst a:hover
 {
 	padding:0px 5px 0px 5px;
-	background-color:white;
-	color: #250c58;
+	background-color:#2f2f2f;
+	color: white;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -795,8 +813,7 @@ pre.ideCScode
 .OH_CodeSnippetContainerTabRight,
 .OH_CodeSnippetContainerTabRightDisabled
 {
-	width: 5px;
-	float: left;
+
 }
 .OH_CodeSnippetContainerTabLeftActive,
 .OH_CodeSnippetContainerTabLeft,
@@ -816,14 +833,17 @@ pre.ideCScode
 {
 	width: 100%;
 	height: 1em;
-	border-top:solid 3px #e5e5e5;
+	border-top:solid 3px #404040;
 }
 
 .OH_CodeSnippetToolBarText
 {
 	float: right;
 	position: relative;
-	background-color: white;
+	background-color: #2f2f2f;
+	border:solid 1px #404040;
+	border-radius: 10px;
+	padding-bottom: 2px;
 	z-index: 100;
 	width: auto;
 	margin-right:13px;
@@ -843,7 +863,7 @@ pre.ideCScode
 .OH_CodeSnippetToolBarText a:visited,
 .OH_CodeSnippetToolBarText a:active
 {
-	color:#1364c4;
+	color:#75B6E7;
 }
 .OH_CodeSnippetToolBarText a:hover
 {
@@ -852,21 +872,28 @@ pre.ideCScode
 .OH_CodeSnippetContainerCodeCollection
 {
     clear: both;
-	border-left:solid 1px #e5e5e5;
-	border-right:solid 1px #e5e5e5;
-	border-bottom:solid 3px #e5e5e5;
+	border-left:solid 1px #404040;
+	border-right:solid 1px #404040;
+	border-bottom:solid 3px #404040;
 	margin:0px;
 	margin-top:2px;
 	margin-bottom:5px;
 	width:99%;
+	background-color:#2F2F2F;
 }
 .OH_CodeSnippetContainerCode
 {
-	width: 100%;
 	border-right-width:0px;
-	margin: 0px;
-	padding:0px;
 	padding-left: 19px;
+	padding-right: 19px;
+}
+.OH_CodeSnippetContainerCode pre
+{
+	overflow-x: hidden;
+}
+.OH_CodeSnippetContainerCodeCollection:hover .OH_CodeSnippetContainerCode pre
+{
+	overflow-x: auto;
 }
 .OH_MultiViewContainerPanel
 {
@@ -874,7 +901,7 @@ pre.ideCScode
 }
 .OH_MultiViewTableHeaderCell
 {
-	PADDING-RIGHT: 3px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 1em; /*12pt*/ PADDING-BOTTOM: 3px; MARGIN: 10px; COLOR: #fff; PADDING-TOP: 3px; FONT-FAMILY: Segoe UI, Verdana, Arial; BACKGROUND-COLOR: #69c
+	PADDING-RIGHT: 3px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 1em; /*12pt*/ PADDING-BOTTOM: 3px; MARGIN: 10px; COLOR: #171717; PADDING-TOP: 3px; FONT-FAMILY: Segoe UI, Verdana, Arial; BACKGROUND-COLOR: #69c
 }
 .OH_MultiViewContainerPanelDhtmlTable
 {
@@ -885,7 +912,7 @@ pre.ideCScode
 }
 .OH_MultiViewTableCellListCell
 {
-	BORDER-RIGHT: #69c 2px solid; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; MARGIN: 0px; BORDER-LEFT: #69c 1px solid; COLOR: #000; PADDING-TOP: 5px; BORDER-BOTTOM: #69c 1px solid; BACKGROUND-COLOR: #ddd
+	BORDER-RIGHT: #69c 2px solid; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; MARGIN: 0px; BORDER-LEFT: #69c 1px solid; COLOR: #e6e6e6; PADDING-TOP: 5px; BORDER-BOTTOM: #69c 1px solid; BACKGROUND-COLOR: #ddd
 }
 .OH_MultiViewTableCellContentCell
 {
@@ -901,11 +928,11 @@ pre.ideCScode
 }
 .OH_mvt_ListBtn A
 {
-	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; MARGIN: 0px; WIDTH: 100%; COLOR: #000; PADDING-TOP: 4px
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; MARGIN: 0px; WIDTH: 100%; COLOR: #e6e6e6; PADDING-TOP: 4px
 }
 .OH_mvt_ListBtn A:active
 {
-	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; MARGIN: 0px; WIDTH: 100%; COLOR: #fff; PADDING-TOP: 4px; BACKGROUND-COLOR: #999
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; MARGIN: 0px; WIDTH: 100%; COLOR: #171717; PADDING-TOP: 4px; BACKGROUND-COLOR: #999
 }
 .OH_mvt_ListBtn A:hover
 {
@@ -920,15 +947,15 @@ pre.ideCScode
 }
 .OH_MultiViewTableCellContentCell TABLE.clsStd
 {
-	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BOTTOM: 0px; PADDING-TOP: 0px; TOP: 0px;BACKGROUND-COLOR: #ffffff
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BOTTOM: 0px; PADDING-TOP: 0px; TOP: 0px
 }
 TABLE.clsStd TBODY TR TH
 {
-	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-SIZE: x-small; PADDING-BOTTOM: 2px; VERTICAL-ALIGN: top; PADDING-TOP: 2px; BACKGROUND-COLOR: #ddd; TEXT-ALIGN: left
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-SIZE: x-small; PADDING-BOTTOM: 2px; VERTICAL-ALIGN: top; PADDING-TOP: 2px; TEXT-ALIGN: left
 }
 TABLE.clsStd TBODY TR TD
 {
-	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-SIZE: x-small; PADDING-BOTTOM: 2px; VERTICAL-ALIGN: top; PADDING-TOP: 2px; BACKGROUND-COLOR: #eee
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-SIZE: x-small; PADDING-BOTTOM: 2px; VERTICAL-ALIGN: top; PADDING-TOP: 2px
 }
 TABLE.clsStd TD SPAN A
 {
@@ -977,7 +1004,7 @@ TABLE.clsStd TD SPAN A
 }
 .OH_outerDiv
 {
-    background-color:#ffffff;
+    background-color:#171717;
 }
 .OH_outerContent
 {
@@ -987,7 +1014,8 @@ TABLE.clsStd TD SPAN A
 .OH_footer
 {
     clear:both;
-    border-top: solid 1px #bbb;
+	background-color: Transparent;
+    border-top: solid 1px #404040;
     padding: 0px 10px 5px 10px;
 }
 .OH_feedbacklink
@@ -1028,7 +1056,7 @@ DIV.OH_outerContent div#mainSection table.OH_borderlessTableSP TD
 DIV.OH_outerContent div#mainSection table.OH_borderlessTableSP TD
 {
     width:300px;
-    background-color:#e5e5e5;
+    background-color:#404040;
 }
 IMG.OH_offlineIcon
 {
@@ -1041,7 +1069,18 @@ td.nsrBottom {   height: 0.6em;  width: 100%;}
 SPAN.code {	FONT-SIZE: 105%;	COLOR: #000066;	FONT-FAMILY: Monospace, Courier New, Courier}
 SPAN.ui {	FONT-WEIGHT: bold}
 SPAN.math {	FONT-STYLE: italic}
-SPAN.input {	FONT-WEIGHT:700;}
+SPAN.input {
+	background-color:#404040;
+	border-radius:3px;
+    padding-top: 0em;
+    padding-right: 0.2em;
+    padding-bottom: 0.1em;
+    padding-left: 0.2em;
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: 0.1em;
+	font-size: 85%;
+	}
 SPAN.term {	FONT-STYLE: italic}
 SPAN.label {	FONT-WEIGHT: bold}
 SPAN.foreignPhrase {	FONT-STYLE: italic}
@@ -1080,7 +1119,7 @@ SPAN.introStyle {	COLOR: DarkGray}
     display: inline-block;
     padding: 5px 7.5px;
     text-decoration: none;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #171717;
 }
 
 .tabGroup a[role="tab"]:hover,
@@ -1174,48 +1213,60 @@ html.theme_night .tabGroup section[role="tabpanel"] {
 	content: '';
 }
 
+.NOTE, .IMPORTANT, .TIP, .WARNING
+{
+	border-radius: 6px;
+	padding-left: 1rem;
+	margin-top: 1rem;
+    color: inherit;
+}
+
 .NOTE p:first-child {
     font-family: segoe-ui_semibold,Segoe UI Semibold,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
-    color: #006d8c;
+    color: #efd9fd;
+	font-size: 120%;
+	text-decoration: underline;
 }
 
 .NOTE {
-    background-color: #d9f6ff;
-    border-color: #bff1ff;
-    color: inherit;
+    background-color: #3b2e58;
+    border: 1px solid #3b2e58;
 }
 
 .IMPORTANT p:first-child {
     font-family: segoe-ui_semibold,Segoe UI Semibold,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
-    color: #351e5e;
+    color: #9ccbee;
+	font-size: 120%;
+	text-decoration: underline;
 }
 
 .IMPORTANT {
-    background-color: #eee9f8;
-    border-color: #daceef;
-    color: inherit;
+    background-color: #004173;
+	border: 1px solid #004173;
 }
 
 .TIP p:first-child {
     font-family: segoe-ui_semibold,Segoe UI Semibold,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
-    color: #006449;
+    color: #dff6dd;
+	font-size: 120%;
+	text-decoration: underline;
 }
 
 .TIP {
-    background-color: #e9faf5;
-    border-color: #cfebe3;
-    color: inherit;
+    background-color: #054b16;
+	border: 1px solid #054b16;
 }
 
 .WARNING p:first-child {
     font-family: segoe-ui_semibold,Segoe UI Semibold,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
-    color: #7e1116;
+    color: #fff4ce;
+	font-size: 120%;
+	text-decoration: underline;
 }
 
 .WARNING {
-    background-color: #fdedee;
-    border-color: #f9d2d4;
-    color: inherit;
+    background-color: #6a4b16;
+	border: 1px solid #6a4b16;
 }
 
 .cardsY .cardImage{
