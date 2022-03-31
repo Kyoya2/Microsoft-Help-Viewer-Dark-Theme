@@ -3,11 +3,11 @@
 2) Open the `Manage Content` tab and navigate to the path sepcified under `Local storage path`
 3) Save the file `.\ContentStore\EN-US\VS2017_BRANDING2_EN-US.1.mshc` in another location in case you would want to go back to the light theme.
 4) Replace that file with the latest release of this repository.
-5) Close visual studio and the help viewer and run `rmdir "%appdata%\..\Local\Microsoft\Windows\INetCache\IE" /S /Q` in cmd. This will force the help viewer to reload its' cache.
+5) Close Visual Studio and the help viewer and run `rmdir "%appdata%\..\Local\Microsoft\Windows\INetCache\IE" /S /Q` in cmd. This will force the help viewer to reload its' cache.
 
 ## How it works:
 The file `VS2017_BRANDING2_EN-US.1.mshc` is a zip archive that contains `js`, `css`, `htm` and other files that make a generic template for all the documentation pages.
-I simply copied some styles from the online microsoft documentation at http://docs.microsoft.com (which has a dark theme) over to the css file in that archive to achieve the dark-theme look.
+I simply copied some styles from the online Microsoft documentation at http://docs.microsoft.com (which has a dark theme) over to the css file in that archive to achieve the dark-theme look.
 
 Some things, such as the colors of a syntax-highlighted code in code-blocks, were just hard coded in each documentation page and were not derived from the template.
 I solved this by ading my own snippet of code in the js file in the archive, this code will look for syntax-highlighted code in the current page and replace it with colors fitting for dark mode.
